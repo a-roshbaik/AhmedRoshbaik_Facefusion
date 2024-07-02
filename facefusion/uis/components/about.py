@@ -11,13 +11,11 @@ def render() -> None:
 	global ABOUT_BUTTON
 	global DONATE_BUTTON
 
-	ABOUT_BUTTON = gradio.Button(
-		value = metadata.get('name') + ' ' + metadata.get('version'),
-		variant = 'primary',
-		link = metadata.get('url')
+	ABOUT_BUTTON = gradio.HTML(
+		value='<img src="file/bLogo.png" />'
 	)
 	DONATE_BUTTON = gradio.Button(
-		value = wording.get('uis.donate_button'),
-		link = 'https://donate.facefusion.io',
+		value = '"استكشف قوة الذكاء الاصطناعي في تركيب وتبديل الوجوه! اشترك الآن في القناة لاكتشاف مجموعة فيديوهات مذهلة تعرض كيفية تطبيق هذه التقنيات في الواقع. لن تندم، اشترك اليوم واكتشف ما يمكن أن يفعله الذكاء الاصطناعي!',
+		link = 'https://www.youtube.com/@ahmedroshbaik/?sub_confirmation=1',
 		size = 'sm'
 	)
